@@ -15,10 +15,10 @@ class MyHandler(SimpleHTTPRequestHandler):
             code = form['code'].value
             print code
 
-            if code == "led1":
+            if code == "buzzer":
                 buzzer.write(1)
-            elif code == "led2":
-                buzzer.write(1)
+            elif code == "led":
+                led.write(1)
             elif code == "reset":
                 led.write(0)
                 buzzer.write(0)
